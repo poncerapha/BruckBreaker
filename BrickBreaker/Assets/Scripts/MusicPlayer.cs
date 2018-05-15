@@ -5,9 +5,10 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour {
     static MusicPlayer instance = null;
 
-	// Use this for initialization
-	void Start () {
-        if(instance != null)
+
+    void Awake()
+    {
+        if (instance != null)
         {
             Destroy(gameObject);
             Debug.Log("Duplicate music player self-destructing!");
@@ -18,6 +19,11 @@ public class MusicPlayer : MonoBehaviour {
             GameObject.DontDestroyOnLoad(gameObject);
 
         }
+    }
+
+    // Use this for initialization
+    void Start () {
+        
        
 		
 	}
