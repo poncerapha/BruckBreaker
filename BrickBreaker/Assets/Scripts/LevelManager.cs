@@ -16,4 +16,10 @@ public class LevelManager : MonoBehaviour {
 		Application.Quit ();
 	}
 
+
+    public void LoadNextLevel()
+    {
+        Application.LoadLevel(Application.loadedLevel + 1);
+    }
+
 }
