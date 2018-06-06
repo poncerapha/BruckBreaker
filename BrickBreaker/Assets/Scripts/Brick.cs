@@ -7,6 +7,8 @@ public class Brick : MonoBehaviour {
 
     public int maxHits;
     private int timesHit;
+    public Sprite[] hitsSprites;
+
     private LevelManager levelManager;
 
 	// Use this for initialization
@@ -29,7 +31,16 @@ public class Brick : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        else
+        {
+            LoadSprites();
+        }
         
+    }
+
+    void LoadSprites()
+    {
+        int spriteIndex = timesHit - 1; 
     }
 
     void SimulaleWin()
